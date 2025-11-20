@@ -16,6 +16,7 @@ import appCss from "~/styles.css?url";
 
 import { ThemeProvider } from "~/components/theme-provider";
 import { Toaster } from "~/components/ui/sonner";
+import { appSettings } from "~/settings/settings";
 
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient;
@@ -40,7 +41,7 @@ export const Route = createRootRouteWithContext<{
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "React TanStarter",
+        title: appSettings.name,
       },
       {
         name: "description",

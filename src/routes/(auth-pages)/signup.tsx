@@ -8,6 +8,7 @@ import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import authClient from "~/lib/auth/auth-client";
 import { authQueryOptions } from "~/lib/auth/queries";
+import { appSettings } from "~/settings/settings";
 
 export const Route = createFileRoute("/(auth-pages)/signup")({
   component: SignupForm,
@@ -67,9 +68,9 @@ function SignupForm() {
               <div className="flex h-8 w-8 items-center justify-center rounded-md">
                 <GalleryVerticalEnd className="size-6" />
               </div>
-              <span className="sr-only">Acme Inc.</span>
+              <span className="sr-only">{appSettings.name}</span>
             </a>
-            <h1 className="text-xl font-bold">Sign up for Acme Inc.</h1>
+            <h1 className="text-xl font-bold">Sign up for {appSettings.name}</h1>
           </div>
           <div className="flex flex-col gap-5">
             <div className="grid gap-2">

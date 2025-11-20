@@ -5,6 +5,7 @@ import { SignOutButton } from "~/components/sign-out-button";
 import { ThemeToggle } from "~/components/theme-toggle";
 import { Button } from "~/components/ui/button";
 import { authQueryOptions } from "~/lib/auth/queries";
+import { appSettings } from "~/settings/settings";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -14,7 +15,7 @@ function HomePage() {
   return (
     <div className="flex min-h-svh flex-col items-center justify-center gap-10 p-2">
       <div className="flex flex-col items-center gap-4">
-        <h1 className="text-3xl font-bold sm:text-4xl">React TanStarter</h1>
+        <h1 className="text-3xl font-bold sm:text-4xl">{appSettings.name}</h1>
         <div className="text-foreground/80 flex items-center gap-2 text-sm max-sm:flex-col">
           This is an unprotected page:
           <pre className="bg-card text-card-foreground rounded-md border p-1">

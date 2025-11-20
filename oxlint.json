@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/crates/oxc_linter/schemas/oxlint.schema.json",
+  "rules": {
+    "recommended": true
+  },
+  "ignore": [
+    "node_modules",
+    "dist",
+    ".output",
+    ".wrangler",
+    ".vercel",
+    ".netlify",
+    "build",
+    "routeTree.gen.ts"
+  ]
+}
+
